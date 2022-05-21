@@ -26,7 +26,7 @@ class Director:
         self.card_list = self.hilo.create_cards()
         self.guess = ""
         self.previous_card =  self.hilo.random_select()
-        self.is_playing = True
+        self.is_playing = Truen
         self.total_score = 300
 
     def start_game(self):
@@ -49,10 +49,12 @@ class Director:
         if playing.lower() =="n":
             self.is_playing = False
             print("Thank you for playing.")
-        else:
+        elif playing.lower() == "y":
             print(f"The card is {self.previous_card}.")
             self.guess= input("What will be the next card, Is it higher or lower?\n:H/L \n:")
 
+        else:
+            print("Incorrect reponse! PLease type 'y' for yes and 'n' for no")
     def do_updates(self):
         """Updates the player's score.
         Args:
