@@ -26,7 +26,7 @@ class Director:
         self.card_list = self.hilo.create_cards()
         self.guess = ""
         self.previous_card =  self.hilo.random_select()
-        self.is_playing = Truen
+        self.is_playing = True
         self.total_score = 300
 
     def start_game(self):
