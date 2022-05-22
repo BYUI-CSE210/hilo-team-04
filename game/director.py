@@ -3,7 +3,7 @@
     Rules listed and your program meets all of the Requirements found on 
     https://byui-cse.github.io/cse210-course-competency/abstraction/materials/hilo-specification.html
 """
-from Hilo_game import Hi_lo
+from game.Hilo_game import Hi_lo
 
 print()
 print("Welcome to HiLo Games!!!")
@@ -97,6 +97,6 @@ class Director:
             return
 
         print(f"Your total score is {self.total_score}.")
-        self.is_playing == (self.total_score > 0)
+        self.is_playing = (self.total_score > 0)
 
         
