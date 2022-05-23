@@ -1,3 +1,4 @@
+
 """
     Update the code and the comments as you change the code for your game.  You will be graded on following the
     Rules listed and your program meets all of the Requirements found on 
@@ -27,7 +28,7 @@ class Director:
         self.guess = ""
         self.previous_card =  self.hilo.random_select()
         self.is_playing = True
-        self.total_score = 300
+        self.total_score = 100
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -85,8 +86,7 @@ class Director:
             print("The cards were the same you lose 75 points.")
             self.total_score -= 75
         self.previous_card = card
-        
-       
+     
 
     def do_outputs(self):
         """Displays the dice and the score. Also asks the player if they want to roll again. 
@@ -98,5 +98,9 @@ class Director:
 
         print(f"Your total score is {self.total_score}.")
         self.is_playing = (self.total_score > 0)
+        if self.total_score <= 0:
+            print ("You lose! Game over!! ")
+
+        
 
         
